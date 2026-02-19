@@ -17,7 +17,7 @@ data "aws_ami" "app_ami" {
 module "blog_vpc" {
   source = "terraform-aws-modules/vpc/aws"
 
-  name = "dev"
+  name = "Dev"
   cidr = "10.0.0.0/16"
 
   azs             = ["eu-central-1a", "eu-central-1b", "eu-central-1c"]
@@ -28,7 +28,7 @@ module "blog_vpc" {
 
   tags = {
     Terraform = "true"
-    Environment = "dev"
+    Environment = "Dev"
   }
 }
 
